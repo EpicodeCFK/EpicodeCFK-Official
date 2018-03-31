@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title
+      | Functions Part 2 | Sections 1 | Python Course | EpicodeCFK - Coding For Kids
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='images/Logo.png')
+  body.funny
+    header
+      .index2
+        header.jframe
+          ul.nav1
+            li.back-python2
+              a.text(href='/python-sections-1')
+                p.back-python1(align='left')
+                  | &#8592 Section Select
+            li.back-python2
+              a.text(href='/functions-1')
+                p.back-python1(style='margin-left: 2%', align='left')
+                  | &#8592 Previous Lesson
+            li.back-python2
+              a.text(href='/finish-section-1')
+                p#back-pyg.back-python1(style='margin-left: 5%;', align='right')
+                  | Next Lesson &#8594
+          a.Logo1(href='/')
+            img.Logo(src='images/Logo.png')
+        nav.g
+          p.ac1
+            ul.nav
+              a.login(href='/') Home
+              a.login(href='/#courses') Courses
+              if !user
+                a.login(href='/users/register') Sign Up
+
+                a.login(href='/users/login') Login
+              
+              a.login(href='/support') Support
+
+              if user
+                a.login(href='/users/logout') Logout
+    nav
+      p.Lesson
+        | Lesson 7/8
+    p.Lesson
+      | Functions Part 2
+    center
+      iframe(width='560', height='315', src='https://www.youtube.com/embed/1QCR9Y5Hpsc', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+    p.j
+      | Links:
+    p.j
+      a(href='https://docs.python.org/3/')
+        | Python 3 Docs
+    p.j
+      a(href='http://www.hooksounds.com')
+        | Music by HookSounds
+    footer.l
+      | &copy Epicode CFK 2018

@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title Register | EpicodeCFK - Coding For Kids
+    link(href='/stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='/images/Logo.png')
+  body.index1
+    .index2
+      header.jframe
+        a.Logo1(href='/')
+          img.Logo(title='Epicode CFK', src='/images/Logo.png')
+      nav.g
+        p.ac1
+          ul.nav
+            a.login(href='/') Home
+            a#coursess.login(href='/#courses') Courses
+            if !user
+
+              a.login(href='/users/login') Login
+              
+            a.login(href='/support') Support
+
+            if user
+              a.login(href='/users/logout') Logout
+    .intro
+      h2.page-header.texting Register
+      p.texting Please Register using the form below
+      ul.errors
+        if errors
+          each error, i in errors
+            li.alert.alert-danger #{error.msg}
+      form(method='post', action='/users/register', enctype='multipart/form-data')
+        .form-group
+          label.texting Name
+          input.form-control(name='name', type='text', placeholder='Enter Name (I cannot see this)')
+
+        .form-group
+          label.texting Username
+          input.form-control(name='username', type='text', placeholder='Enter Username (I cannot see this)')
+
+        .form-group
+          label.texting Password
+          input.form-control(name='password', type='password', placeholder='Enter Password (I cannot see this)')
+
+        .form-group
+          label.texting Confirm Password
+          input.form-control(name='password2', type='password', placeholder='Confirm Password (I cannot see this)')
+
+        .form-group
+          label.texting Profile Image
+          input.form-control(name='profileimage', type='file')
+        input.btn.btn-primary(type='submit', name='submit', value="Register")
+    footer
+      p.l &copy Epicode CFK 2018

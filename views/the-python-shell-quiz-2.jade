@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title
+      | The Python Shell QUIZ | Sections 1 | Python Course | EpicodeCFK - Coding For Kids
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='images/Logo.png')
+  body.funny
+    header
+      .index2
+        header.jframe
+          ul.nav1
+            li.back-python2
+              a.text(href='/python-sections-1')
+                p.back-python1(align='left')
+                  | &#8592 Section Select
+            li.back-python2
+              a.text(href='/the-python-shell')
+                p.back-python1(style='margin-left: 2%', align='left')
+                  | &#8592 Back to Lesson
+            li.back-python2
+              a#next1.text(href='/numbers-but-no-words')
+                p#back-pyg.back-python1(style='margin-left: 30%;', align='right')
+                  | Skip Quiz &#8594
+          a.Logo1(href='/')
+            img.Logo(src='images/Logo.png')
+        nav.g
+          p.ac1
+            ul.nav
+              a.login(href='/') Home
+              a.login(href='/#courses') Courses
+              a.login(href='../../login-system/index.php') Login or Sign Up
+    nav
+      p.Lesson
+        | Lesson 2/8 QUIZ (Beta)
+      p#inco.Lesson(style='color: green; display: none;')
+    form.row(name='myform')
+      p#question.great
+        | If I type in 5 + 5 into the Python Shell the output would be:
+      button.lol1(type='button', name='q1a', value='2', onclick='checka()', style='border-color: white;')
+        p#choice1.lol
+          | 78
+      button.lol2(type='button', name='q1b', value='36', onclick='checkb()', style='border-color: white;')
+        p#choice2.lol
+          | 10
+      button.lol2(type='button', name='q1c', value='542', onclick='checkc()', style='border-color: white;')
+        p#choice3.lol
+          | 42
+      button.lol2(type='button', name='q1d', value='1000', onclick='checkd()', style='border-color: white;')
+        p#choice4.lol
+          | 100
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script.
+      var correct;
+      function checkb(){
+      $("#inco").html("&#10004 You got it right!");
+      $("#inco").css("color", "green");
+      $("#back-pyg").html("Finish &#8594");
+      $("#next1").attr("href", "/numbers-but-no-words");
+      $("#inco").css("display", "block");
+      correct === true;
+      }
+      function checka() {
+      $("#inco").html("&#10006 Better Luck Next Time!");
+      $("#inco").css("color", "red");
+      $("#back-pyg").html("Finish &#8594");
+      $("#next1").attr("href", "/numbers-but-no-words");
+      $("#inco").css("display", "block");
+      correct === false;
+      }
+      function checkc() {
+      $("#inco").html("&#10006 Better Luck Next Time!");
+      $("#inco").css("color", "red");
+      $("#back-pyg").html("Finish &#8594");
+      $("#next1").attr("href", "/numbers-but-no-words");
+      $("#inco").css("display", "block");
+      correct === false;
+      }
+      function checkd() {
+      $("#inco").html("&#10006 Better Luck Next Time!");
+      $("#inco").css("color", "red");
+      $("#back-pyg").html("Finish &#8594");
+      $("#next1").attr("href", "/numbers-but-no-words");
+      $("#inco").css("display", "block");
+      correct === false;
+      }
+    footer
+      p.l &copy Epicode CFK 2018

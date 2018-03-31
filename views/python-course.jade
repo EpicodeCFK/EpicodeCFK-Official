@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title
+      | Python Course | EpicodeCFK - Coding For Kids
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='images/Logo.png')
+  body.funny
+    .index2
+      header.jframe
+        a.Logo1(href='/')
+          img.Logo(src='images/Logo.png')
+      nav.g
+        p.ac1
+          ul.nav
+            a.login(href='/') Home
+            a.login(href='/#courses') Courses
+            if !user
+              a.login(href='/users/register') Sign Up
+
+              a.login(href='/users/login') Login
+              
+            a.login(href='/support') Support
+
+            if user
+              a.login(href='/users/logout') Logout
+    .about-python
+      p.about-python2
+        | Welcome to the Python Programming Course.
+      p.about-python2
+        | Python is a powerful language used to do Data Science, 2D Game Development, Software Development, Machine Learning/ Robotics/ AI/ Hardware, Web Development, and much more!
+      p.about-python2
+        | In this course, you will first get a good understanding of the python tools you will use on a daily basis, and all of the basics of the language. Then, you will learn about all of the collections in Python. Next, you will learn about the object-oriented programming paradigm of Python.
+      label.optional1
+        | Optional:
+      p.about-python2
+        | The first optional subcourse will give you a strong understanding of how to make powerful software in Python using Tkinter.
+      p.about-python2
+        | The second optional subcourse will teach you how to make fun and entertaining 2D games in Python using Pygame.
+    ul.no-bullets
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(href='/python-sections-1')
+          .python-subcourses-wrapper
+            h1.pad Python Basics
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper
+            h1.pad Python Lists and Other Collections coming soon
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper(style='hover:cursor:pointer;')
+            h1.pad Object-Oriented Python coming soon
+      label.optional2
+        | Optional:
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper(style='hover:cursor:pointer;')
+            h1.pad Pycharm coming soon
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper(style='hover:cursor:pointer;')
+            h1.pad Practice Challenges coming soon
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper(style='hover:cursor:pointer;')
+            h1.pad Tkinter coming soon
+      li.python-subcources(style='hover:cursor:pointer;')
+        a.python-subcources2(onclick="alert('Coming Soon!')")
+          .python-subcourses-wrapper(style='hover:cursor:pointer;')
+            h1.pad Pygame coming soon
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript').
+      var numberOfSubcourcesDone = 0;
+      var PythonBasicsDone = true;
+      var PythonListAndOtherCollectionsDone = true;
+      var ObjectOrientedPythonDone = false;
+      var PythonProgressBar = document.getElementById("python-progress-bar");
+      if (PythonBasicsDone === true) {
+      numberOfSubcourcesDone === 1;
+      } else if (PythonBasicsDone === true && PythonListAndOtherCollectionsDone === true) {
+      numberOfSubcourcesDone === 2;
+      } else if (PythonBasicsDone === true && PythonListAndOtherCollectionsDone === true && ObjectOrientedPythonDone === true) {
+      numberOfSubcourcesDone === 3;
+      }
+      if (numberOfSubcourcesDone === 3) {
+      PythonProgressBar.style.width === 100%;
+      } else if (numberOfSubcourcesDone === 2) {
+      PythonProgressBar.style.width === 66%;
+      } else if (numberOfSubcourcesDone === 1) {
+      PythonProgressBar.style.width === 33%;
+      } else if (numberOfSubcourcesDone === 0) {
+      PythonProgressBar.style.width === 0%;
+      }
+    footer.l &copy Epicode CFK 2018

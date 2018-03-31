@@ -1,0 +1,147 @@
+doctype html
+html
+  head
+    title Home | EpicodeCFK - Coding For Kids
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='images/image1.jpeg')
+  body.index1
+    .index2
+      header.jframe
+        a.Logo1(href='/')
+          img.Logo(title='Epicode CFK', src='images/Logo.png')
+      nav.g
+        p.ac1
+          ul.nav
+            a.login(href='/') Home
+
+            a#coursess.login(href='#courses') Courses
+
+            if !user
+              a.login(href='/users/register') Sign Up
+
+              a.login(href='/users/login') Login
+              
+            a.login(href='/support') Support
+
+            if user
+              a.login(href='/users/logout') Logout
+    .intro
+      p.j Hello everyone, My name is Epic! Have you ever wanted to make some sort of software that your friends can use? Or maybe a fun game? Well you have come to the right place. On this website I will be teaching programming. I hope you enjoy! (This is a Beta Test. This is just a test version, and the full python course will be released soon. If you have any suggestions or if something is not working properly, please email me at epicodecfk@gmail.com. Thanks!)
+
+    .intro
+      p.j Top 5 Programming Languages to learn in 2018 (I guess not only on the youtube channel):
+      iframe(style="margin-left: 30%; margin-right: 35%; margin-bottom: 10px;", width='560', height='315', src='https://www.youtube.com/embed/Yni_IINqI7g', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+
+
+
+    
+
+
+    p#courses.courses COURSES: 
+    button#btn.buuton
+      p.what
+        | What is a programming language? 
+        img.vidimg(src='images/vidimg.png')
+    #myModal.modal
+      // Modal content
+      .modal-content
+        span.close ×
+        video#vid.modal-vid(controls='')
+          source(src='vid1.mp4', type='video/mp4')
+    a.the-python-course(href='Python1.html')
+      .python-course
+        .python-course2
+          h1.python-course3
+            ul
+              li.pythont
+                a.pygont(href='/python-course')
+                  | Python Programming
+              li.watch
+                button#btn2.buuton
+                  img.vidimg2(src='images/vidimg.png')
+                span.watch-text Python Programming Trailer
+    #myModal2.modal
+      // Modal content
+      .modal-content
+        span.close ×
+        video#vid2.modal-vid(controls='')
+          source(src='videos/Python Programming Trailer.mp4', type='video/mp4')
+    footer
+      p.l &copy Epicode CFK 2018
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $("#coursess").on("click", function(event) {
+      if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+      scrollTop: $(hash).offset().top
+      }, 800, function() {
+      window.location.hash = hash;
+      });
+      }
+      });
+      });
+    script(type='text/javascript').
+      var modal = document.getElementById('myModal');
+      var modal2 = document.getElementById('myModal2');
+      // Get the button that opens the modal
+      var btn = document.getElementById("btn");
+      var btn2 = document.getElementById("btn2");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close")[1];
+      var video1 = document.getElementById("vid");
+      var video2 = document.getElementById("vid2");
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+      $("#myModal").slideDown();
+      $("#myModal").show();
+      window.blur();
+      if (modal.style.display == "block") {
+      video1.play();
+      }
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+      $("#myModal").slideUp();
+      $("#myModal").hide();
+      video1.currentTime = 0;
+      video1.pause();
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      video1.currentTime = 0;
+      video1.pause();
+      }
+      }
+      if (modal.style.display == "none") {
+      video1.currentTime = 0;
+      }
+      // When the user clicks on the button, open the modal
+      btn2.onclick = function() {
+      $("#myModal2").slideDown();
+      $("#myModal2").show();
+      window.blur();
+      if (modal2.style.display == "block") {
+      video2.play();
+      }
+      }
+      // When the user clicks on <span> (x), close the modal
+      span2.onclick = function() {
+      $("#myModal2").slideUp();
+      $("#myModal2").hide();
+      video2.currentTime = 0;
+      video2.pause();
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal2) {
+      modal2.style.display = "none";
+      video2.currentTime = 0;
+      video2.pause();
+      }
+      }

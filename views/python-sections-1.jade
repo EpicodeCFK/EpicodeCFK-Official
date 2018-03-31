@@ -1,0 +1,150 @@
+doctype html
+html
+  head
+    style(type='text/css').
+      .no-bullets li {
+      list-style-type: none;
+      }
+      .linstyle {
+      text-decoration: none;
+      color: blue;
+      background-color: yellow;
+      width: 20px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      }
+    title
+      | Sections 1 | Python Course | EpicodeCFK - Coding For Kids
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(rel='icon', href='images/Logo.png')
+  body.funny
+    .index2
+      header.jframe
+        ul.nav1
+          li.back-python2
+            a.text(href='/python-course')
+              p.back-python1
+                | &#8592 Python Course
+        a.Logo1(href='/')
+          img.Logo(src='images/Logo.png')
+      nav.g
+        p.ac1
+          ul.nav
+            a.login(href='/') Home
+            a.login(href='/#courses') Courses
+            if !user
+              a.login(href='/users/register') Sign Up
+
+              a.login(href='/users/login') Login
+              
+            a.login(href='/support') Support
+
+            if user
+              a.login(href='/users/logout') Logout
+    ul.no-bullets
+      li#li1.python-subcources
+        a#button1.python-sections1
+          .python-subcourses-wrapper
+            h1.pad 1. The First Things                	⇩
+        ul.ul1
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/download-python', style='padding: 10px; font-family: Comic Sans MS;')
+              | 1. Download Python
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/the-python-shell', style='padding: 10px; font-family: Comic Sans MS;')
+              | 2. The Python Shell
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/numbers-but-no-words', style='padding: 10px; font-family: Comic Sans MS;')
+              | 3. Numbers But no Words?
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/data-types', style='padding: 10px; font-family: Comic Sans MS;')
+              | 4. Data Types
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/variables', style='padding: 10px; font-family: Comic Sans MS;')
+              | 5. Variables
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/functions-1', style='padding: 10px; font-family: Comic Sans MS;')
+              | 6. Functions Part:1
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/functions-2', style='padding: 10px; font-family: Comic Sans MS;')
+              | 7. Functions Part:2
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/finish-section-1', style='padding: 10px; font-family: Comic Sans MS;')
+              | 8. Finish Section 1
+      li#li2.python-subcources
+        a#button2.python-subcources2
+          .python-subcourses-wrapper
+            h1.pad 2. Python Logic Coming Soon                	⇩
+        ul.ul2
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/booleans', style='padding: 10px; font-family: Comic Sans MS;')
+              | 1. Booleans
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/boolean-operators', style='padding: 10px; font-family: Comic Sans MS;')
+              | 2. Boolean Operators
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/if-else', style='padding: 10px; font-family: Comic Sans MS;')
+              | 3. If/ Else
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/if-elif-else', style='padding: 10px; font-family: Comic Sans MS;')
+              | 4. If/ Elif/ Else
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/import', style='padding: 10px; font-family: Comic Sans MS;')
+              | 5. Import
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/while-loops', style='padding: 10px; font-family: Comic Sans MS;')
+              | 6. While Loops
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/try-except', style='padding: 10px; font-family: Comic Sans MS;')
+              | 7. Try/ Except
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/try-except-else-finally', style='padding: 10px; font-family: Comic Sans MS;')
+              | 8. Try/ Except/ Else/ Finally
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/finish-section-2', style='padding: 10px; font-family: Comic Sans MS;')
+              | 9 . Finish Section 2
+      li#li3.python-subcources
+        a#button3.python-subcources2
+          .python-subcourses-wrapper
+            h1.pad 3. Our First Project, Finally Coming Soon!                	⇩
+        ul.ul3
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/setup', style='padding: 10px; font-family: Comic Sans MS;')
+              | 1. Setup
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/if-statements', style='padding: 10px; font-family: Comic Sans MS;')
+              | 2. If Statements
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/errors', style='padding: 10px; font-family: Comic Sans MS;')
+              | 3. Errors
+          li(style='padding-top: 10px; padding-bottom: 10px;')
+            a.linstyle(href='/finish-python-basics', style='padding: 10px; font-family: Comic Sans MS;')
+              | 4. Finish Python Basics
+    footer.l
+      | &copy Epicode CFK 2018
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript').
+      $("#button1").siblings().hide();
+      $("#button2").siblings().hide();
+      $("#button3").siblings().hide();
+      $(function() {
+      $("#button1").css({cursor: "pointer"})
+      $("#button1").click(function() {
+      $("#button1").siblings().slideToggle();
+      });
+      });
+      $(function() {
+      $("#button2").css({cursor: "pointer"})
+      $("#button2").click(function() {
+      alert("Coming Soon!");
+      });
+      });
+      $(function() {
+      $("#button3").css({cursor: "pointer"})
+      $("#button3").click(function() {
+      alert("Coming Soon!");
+      });
+      });
+    
